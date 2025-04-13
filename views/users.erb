@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Usuários Cadastrados</title>
+</head>
+<body>
+  <h1>Usuários Cadastrados</h1>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Sexo</th>
+      <th>Email</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user['id'] %></td>
+        <td><%= user['name'] %></td>
+        <td><%= user['gender'] %></td>
+        <td><%= user['email'] %></td>
+      </tr>
+    <% end %>
+  </table>
+  <br>
+  <a href="/">Voltar ao formulário</a>
+</body>
+</html>
